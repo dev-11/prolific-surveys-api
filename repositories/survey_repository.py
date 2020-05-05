@@ -11,7 +11,8 @@ class SurveyRepository:
             survey['id'] = str(uuid4())
             self._surveys.append(survey)
         else:
-            self._surveys.remove(survey)
+            if survey in self._surveys:
+                self._surveys.remove(survey)
             self._surveys.append(survey)
         return survey['id']
 
