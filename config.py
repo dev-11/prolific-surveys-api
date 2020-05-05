@@ -1,0 +1,2 @@
+DEBUG = True
+PORT_NUMBER = 5005

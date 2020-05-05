@@ -32,4 +32,4 @@ ignore:
   - "**/config.py"
   - "config.py"
   - "**/__init__.py"
-
+  - "apis/**"
