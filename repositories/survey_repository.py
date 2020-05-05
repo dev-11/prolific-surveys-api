@@ -1,5 +1,5 @@
 from uuid import uuid4
-import validator as v
+import validators as v
 
 
 class SurveyRepository:

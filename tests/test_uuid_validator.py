@@ -1,5 +1,5 @@
 import unittest
-import validator as v
+import validators as v
 
 
 class UuidValidatorTests(unittest.TestCase):
