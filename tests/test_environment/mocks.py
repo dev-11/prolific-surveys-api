@@ -23,7 +23,7 @@ def get_mocked_survey_response_repo():
     return repo
 
 
-def get_mocked_survey_repo():
+def get_mocked_survey_repo(available_places=1):
     repo = SurveyRepository()
     repo.get_all = Mock(name='get_all')
     repo.get_all.return_value = get_list_of_two_surveys()
@@ -35,7 +35,7 @@ def get_mocked_survey_repo():
     repo.get.return_value = {
         'id': uuid.UUID("06335e84-2832-4914-8c5d-3ed07d2a2f11"),
         'name': 'test_survey_name',
-        'available_places': 1,
+        'available_places': available_places,
         'user_id': 2
     }
     return repo

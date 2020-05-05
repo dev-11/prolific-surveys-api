@@ -35,3 +35,18 @@ class SurveyServiceTests(unittest.TestCase):
         s = SurveyService(mocks.get_mocked_survey_repo())
         survey_id = s.add_or_update(survey)
         self.assertEqual(uuid.UUID("06335e84-2832-4914-8c5d-3ed07d2a2f11"), survey_id)
+
+    def test_has_available_places_returns_true_for_positive_number(self):
+        s = SurveyService(mocks.get_mocked_survey_repo())
+        has_available_places = s.has_available_places(uuid.UUID("06335e84-2832-4914-8c5d-3ed07d2a2f11"))
+        self.assertTrue(has_available_places)
+
+    def test_has_available_places_returns_true_for_zero(self):
+        s = SurveyService(mocks.get_mocked_survey_repo(0))
+        has_available_places = s.has_available_places(uuid.UUID("06335e84-2832-4914-8c5d-3ed07d2a2f11"))
+        self.assertFalse(has_available_places)
+
+    def test_has_available_places_returns_true_for_negative_number(self):
+        s = SurveyService(mocks.get_mocked_survey_repo(-1))
+        has_available_places = s.has_available_places(uuid.UUID("06335e84-2832-4914-8c5d-3ed07d2a2f11"))
+        self.assertFalse(has_available_places)

@@ -33,3 +33,4 @@ ignore:
   - "config.py"
   - "**/__init__.py"
   - "apis/**"
+  - "app.py"
