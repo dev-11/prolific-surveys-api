@@ -20,7 +20,6 @@ The `SurveyResponseService` handles every business logic related to the response
 ## APIs
 
 The system recognises two namespaces `surveys` and `survey-responses` they expose their service related to the actual namespace.
- 
 
 ## Improvements
 
