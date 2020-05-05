@@ -8,7 +8,7 @@
 
 The solution uses two services and two repositories.
 
-### Repositories
+## Repositories
 
 The `SurveyRepository` and the `SurveyResponseService` handles every data storage related operation, in a separated responsibility fashion. They don't hold any business logic, they just read, update, store the data.  
 
