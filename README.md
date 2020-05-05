@@ -19,12 +19,12 @@ The `SurveyResponseService` handles every business logic related to the response
 
 ## APIs
 
-The system recognises two namespaces `surveys` and `survey-responses` they expose their service related to the actual namespace.
+The api recognises two namespaces `surveys` and `survey-responses` they expose their service related to the actual namespace.
 
 ## Improvements
 
-The repositories store everything at the memory, for a production ready solution that has to change. 
-There is no data validation at the endpoints, users can send in 0 for as the value of the user_id, or an empty string for the survey name, etc.
+The repositories store everything in the memory, for a production ready solution that has to change. 
+There is no data validation at the endpoints, users can send in 0 as the value of the user_id, or an empty string for the survey name, etc.
 There is no consolidated error handling in the api or standardized response format. I would return a format like this:
 ```json5
 {
