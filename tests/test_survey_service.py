@@ -26,11 +26,12 @@ class SurveyServiceTests(unittest.TestCase):
 
     def test_add_adds_one_item_and_returns_id(self):
         survey = {
+            'id': 0,
             'name': 'test_survey_name',
             'available_places': 1,
             'user_id': 2
         }
 
         s = SurveyService(mocks.get_mocked_survey_repo())
-        survey_id = s.add(survey)
+        survey_id = s.add_or_update(survey)
         self.assertEqual(uuid.UUID("06335e84-2832-4914-8c5d-3ed07d2a2f11"), survey_id)

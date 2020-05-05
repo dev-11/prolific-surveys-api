@@ -1,8 +1,8 @@
 # code-python-template-repo
 
 [![Build Status](https://travis-ci.org/dev-11/prolific-surveys-api.svg?branch=master)](https://travis-ci.org/dev-11/prolific-surveys-api)
-[![codecov](https://codecov.io/gh/masterbranch-io/code-python-template-repo/branch/master/graph/badge.svg)](https://codecov.io/gh/masterbranch-io/code-python-template-repo)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/99d764fe6586436f82d34c8686405844)](https://www.codacy.com/gh/masterbranch-io/code-python-template-repo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=masterbranch-io/code-python-template-repo&amp;utm_campaign=Badge_Grade)
+[![codecov](https://codecov.io/gh/dev-11/prolific-surveys-api/branch/master/graph/badge.svg)](https://codecov.io/gh/dev-11/prolific-surveys-api)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0971683aad8c4d898d2c11f45e1768b8)](https://www.codacy.com/manual/dev-11/prolific-surveys-api?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dev-11/prolific-surveys-api&amp;utm_campaign=Badge_Grade)
 
 TODO after generating a repo from the template
 

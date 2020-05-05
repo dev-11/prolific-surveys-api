@@ -5,10 +5,17 @@ class SurveyRepository:
     def __init__(self):
         self._surveys = []
 
-    def add(self, survey):
-        survey.id = uuid.uuid4()
-        self._surveys.append(survey)
-        return survey.id
+    def add_or_update(self, survey):
+        if survey['id'] == 0:
+            survey['id'] = uuid.uuid4()
+            self._surveys.append(survey)
+        else:
+            self._surveys.remove(survey)
+            self._surveys.append(survey)
+        return survey['id']
+
+    def get(self, survey_id):
+        return list(filter(lambda x: x.id == survey_id, self._surveys))[0]
 
     def get_all(self):
         return self._surveys
