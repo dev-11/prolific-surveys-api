@@ -1,1 +1,3 @@
-from .survey_repository import SurveyRepository, SurveyResponseRepository
+from .survey_repository import SurveyRepository
+from .survey_response_repository import SurveyResponseRepository
+

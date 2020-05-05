@@ -5,7 +5,8 @@ from .namespace_survey_responses import api as ns2
 
 api = Api(
     title='Prolific Survey API',
-    version='1.0'
+    version='1.0',
+    doc='/doc/'
 )
 
 api.add_namespace(ns1)

@@ -22,7 +22,6 @@ class TestSurveyResponseService(unittest.TestCase):
     def test_03(self):
         srs = SurveyResponseService(mocks.get_mocked_survey_response_repo(), mocks.get_mocked_survey_service(True))
         response = srs.add({
-            'id': uuid.UUID("06335e84-2832-4914-8c5d-3ed07d2a2f12"),
             'user_id': 2,
             'created_at': dt(2020, 1, 1, 12, 00, 00),
             'survey_id': 1
@@ -32,7 +31,6 @@ class TestSurveyResponseService(unittest.TestCase):
     def test_04(self):
         srs = SurveyResponseService(mocks.get_mocked_survey_response_repo(), mocks.get_mocked_survey_service(False))
         self.assertRaises(ValueError, srs.add, {
-            'id': uuid.UUID("16335e84-2832-4914-8c5d-3ed07d2a2f11"),
             'user_id': 2,
             'created_at': dt(2020, 1, 1, 12, 00, 00),
             'survey_id': 1

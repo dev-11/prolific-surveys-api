@@ -1,4 +1,4 @@
-from repositories import SurveyRepository, SurveyResponseRepository
+from repositories import SurveyRepository
 
 
 class SurveyService:
@@ -22,21 +22,9 @@ class SurveyService:
     def get_by_user_id(self, user_id):
         return self._repo.get_by_user_id(user_id)
 
-
-class SurveyResponseService:
-    def __init__(self, repo: SurveyResponseRepository, survey_service: SurveyService):
-        self._repo = repo
-        self._survey_service = survey_service
-
-    def add(self, survey_response):
-        if self._survey_service.has_available_places(survey_response['survey_id']):
-            self._survey_service.decrease_available_places(survey_response['survey_id'], 1)
-            return self._repo.add(survey_response)
-
-        raise ValueError('Survey does not have available places')
-
-    def get_by_survey_id(self, survey_id):
-        return self._repo.get_by_survey_id(survey_id)
-
-    def get_by_user_id(self, user_id):
-        return self._repo.get_by_user_id(user_id)
+    def has_item(self, survey_id):
+        try:
+            self._repo.get(survey_id)
+            return True
+        except ValueError:
+            return False
