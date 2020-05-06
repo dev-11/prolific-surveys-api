@@ -10,7 +10,7 @@ The solution uses two services and two repositories.
 
 ## Repositories
 
-The `SurveyRepository` and the `SurveyResponseService` handles every data storage related operation, in a separated responsibility fashion. They don't hold any business logic, they just read, update, store the data.  
+The `SurveyRepository` and the `SurveyResponseService` handle every data storage related operation, in a separated responsibility fashion. They don't hold any business logic, they just read, update, or store the data.  
 
 ## Services
 
@@ -34,6 +34,25 @@ There is no consolidated error handling in the api or standardized response form
   }
 }
 ```
+There is no direct link between the survey and the survey responses, if there is a persistence layer to be introduced then a merged storage of the two entities would be better. For example:
+```json5
+{
+  "id": "8f5454ed-8fe5-430a-97ad-c8dc424eda6a",
+  "survey name": "Are you a dog person or a cat person?",
+  "available places": 256,
+  "user_id": 27,
+  "responses": [
+    {
+      "id": "0f773e3d-9ef4-47ba-95bc-45db2c553a24",
+      "user_id": 1024
+    },
+    {
+      "id": "3a3b9488-de64-4c56-87d2-21c5bc76a253",
+      "user_id": 2048
+    }
+  ]
+}
+``` 
 
 ## How to run
 
