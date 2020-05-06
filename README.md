@@ -34,7 +34,7 @@ There is no consolidated error handling in the api or standardized response form
   }
 }
 ```
-There is no direct link between the survey and the survey responses, if there is a persistence layer to be introduced then a merged storage of the two entities would be better. For example:
+Because of the separation there is no direct link between the survey and the survey responses, if there is a persistence layer to be introduced then a merged storage of the two entities would be better. This separation looked a good solution when I wrote the code, if I could do it again, I would probably choose the format below, with lazy loading to avoid reading up a million responses when we just need to update the `available_places` property. For example:
 ```json5
 {
   "id": "8f5454ed-8fe5-430a-97ad-c8dc424eda6a",
